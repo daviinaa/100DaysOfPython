@@ -60,6 +60,7 @@ def count_down(count):
             marks += "✔"
             checkmarks.config(text=marks, fg=GREEN)
 
+
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Pomodoro")
