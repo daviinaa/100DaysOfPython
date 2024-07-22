@@ -72,3 +72,7 @@ wrong_button.grid(column=0, row=2)
 next_card()
 
 window.mainloop()
+
+# smtp password
+# ujyd wvep qafo nbia
+# smtplib.SMTP("smtp.gmail.com", port=587)
