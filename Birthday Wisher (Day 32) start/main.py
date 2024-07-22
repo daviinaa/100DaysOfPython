@@ -18,5 +18,6 @@ if day_of_the_week == 0:
         password = "put your own password"
         # connection.starttls()
         connection.login(user=my_mail, password=password)
-        connection.sendmail(from_addr=my_mail, to_addrs="pytestingtest@yahoo.com", msg=f"Subject:Motivational Quotes\n\n "
-                                                                                   f"{quote_ofthe_day}")
+        connection.sendmail(from_addr=my_mail, to_addrs="pytestingtest@yahoo.com",
+                            msg=f"Subject:Motivational Quotes\n\n "
+                                f"{quote_ofthe_day}")
