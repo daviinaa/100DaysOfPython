@@ -21,3 +21,6 @@ if day_of_the_week == 0:
         connection.sendmail(from_addr=my_mail, to_addrs="pytestingtest@yahoo.com",
                             msg=f"Subject:Motivational Quotes\n\n "
                                 f"{quote_ofthe_day}")
+
+
+
