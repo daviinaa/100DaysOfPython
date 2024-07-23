@@ -33,6 +33,7 @@
 import requests
 import datetime as dt
 import smtplib
+import time
 
 MY_LAT = 6.595680
 MY_LONG = 3.337030
@@ -68,11 +69,15 @@ def is_night():
         return True
 
 
-if is_iss_overhead and is_night:
-    my_mail = "thisisfortest8983@gmail.com"
-    with smtplib.SMTP_SSL("smtp.gmail.com", port=465) as connection:
-        password = ""
-        # connection.starttls()
-        connection.login(user=my_mail, password=password)
-        connection.sendmail(from_addr=my_mail,
-                            to_addrs="pytestingtest@yahoo.com", msg="Subject:ISS\n\n look Up!!!")
+while True:
+    time.sleep(60)
+    if is_iss_overhead and is_night:
+        my_mail = "thisisfortest8983@gmail.com"
+        with smtplib.SMTP_SSL("smtp.gmail.com", port=465) as connection:
+            password = ""
+            # connection.starttls()
+            connection.login(user=my_mail, password=password)
+            connection.sendmail(from_addr=my_mail,
+                                to_addrs="pytestingtest@yahoo.com", msg="Subject:ISS\n\n look Up!!!")
+
+
