@@ -30,6 +30,7 @@
 #
 #
 
+# chcking for when iss is over head and in my location and its dark, then sending me a mail to look up
 import requests
 import datetime as dt
 import smtplib
@@ -68,7 +69,7 @@ def is_night():
     if timestamp >= sunset or timestamp <= sunrise:
         return True
 
-
+# this while loop and sleep module will make it run every 6 hrs
 while True:
     time.sleep(60)
     if is_iss_overhead and is_night:
